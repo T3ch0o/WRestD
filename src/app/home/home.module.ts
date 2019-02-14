@@ -19,12 +19,13 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
             }
         ]),
         NgCircleProgressModule.forRoot({
-            backgroundStrokeWidth: 3,
+            backgroundGradient: true,
+            backgroundGradientStopColor: '#650071',
+            backgroundOpacity: 0.05,
             outerStrokeWidth: 16,
             outerStrokeColor: '#8000FF',
             outerStrokeGradient: true,
             outerStrokeGradientStopColor: '#FF00CB',
-            backgroundStroke: '#33003F',
             animationDuration: 300,
             animation: false,
             responsive: true,

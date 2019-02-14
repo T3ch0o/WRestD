@@ -1,10 +1,10 @@
 <ion-content padding>
     <ion-item color="dark">
-        <ion-label>Rest Duration</ion-label>
-        <ion-datetime displayFormat="mm:ss" placeholder="Tap here" [ngModel]="fullTime"></ion-datetime>
+        <ion-label>Workout/Rest Duration</ion-label>
+        <ion-datetime displayFormat="mm:ss" placeholder="Tap here" [(ngModel)]="fullTime"></ion-datetime>
     </ion-item>
 
-    <circle-progress (click)="startTime()"
+    <circle-progress (click)="changeSession()"
         [percent]="percent"
         [radius]="radius"
         [title]="title"

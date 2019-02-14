@@ -59,8 +59,9 @@
         "no-empty": false,
         "no-empty-interface": true,
         "no-eval": true,
+        "no-infferable-types": false,
         "no-inferrable-types": [
-            true,
+            false,
             "ignore-params"
         ],
         "no-misused-new": true,

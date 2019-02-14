@@ -34,6 +34,7 @@ export class HomePage {
             clearInterval(this.timer);
         }
         if (!this.overallTimer) {
+            this.title = 'Workout';
             this.progressTimer();
             this.insomnia.keepAwake();
         }
@@ -41,7 +42,6 @@ export class HomePage {
         this.timer = false;
         this.percent = 0;
         this.progress = 0;
-        this.title = 'Rest';
 
         const timeSplit = this.fullTime.split(':');
         this.minutes = parseInt(timeSplit[1]);
@@ -57,6 +57,18 @@ export class HomePage {
             this.percent = Math.floor((this.progress / totalSeconds) * 100);
             this.progress++;
         }, 1000);
+    }
+
+    changeSession() {
+        if (this.timer) {
+            if (this.title === 'Workout') {
+                this.title = 'Rest';
+            } else {
+                this.title = 'Workout';
+            }
+
+            this.startTime();
+        }
     }
 
     progressTimer() {
@@ -99,6 +111,7 @@ export class HomePage {
             s: '00'
         };
 
+        this.title = '';
         this.insomnia.allowSleepAgain();
     }
 }

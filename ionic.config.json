@@ -1,5 +1,7 @@
 {
   "name": "WRestD",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
